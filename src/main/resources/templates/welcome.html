@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+Hello {{name}}
+You have just won {{value}} dollars!
+{{#in_ca}}
+Well, {{taxed_value}} dollars, after taxes.
+{{/in_ca}}
+
+</br>
+<br>
+
+{{#userList}}
+  <b>{{name}}</b>
+{{/userList}}
+
+
+</br>
+<br>
+
+
+{{#userList}}
+  <b>{{name}}</b>
+{{/userList}}
+{{^userList}}
+  No repos :(
+{{/userList}}
+
+</body>
+</html>
