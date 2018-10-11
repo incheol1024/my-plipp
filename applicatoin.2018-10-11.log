@@ -1212,3 +1212,53 @@ Caused by: java.lang.IllegalArgumentException: 'script' must not be null or empt
 2018:10:11 16:51:11.904 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 2 ms 
 2018:10:11 16:51:16.421 INFO  --- [http-nio-8080-exec-7] o.h.h.i.QueryTranslatorFactoryInitiator : HHH000397: Using ASTQueryTranslatorFactory 
 2018:10:11 16:51:16.429 INFO  --- [http-nio-8080-exec-7] net.plipp.web.UserController : javapass 
+2018:10:11 16:58:40.216 INFO  --- [Thread-56] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4bfa466d: startup date [Thu Oct 11 16:50:54 KST 2018]; root of context hierarchy 
+2018:10:11 16:58:40.218 INFO  --- [Thread-56] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:10:11 16:58:40.219 INFO  --- [Thread-56] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2018:10:11 16:58:40.219 INFO  --- [Thread-56] o.h.tool.hbm2ddl.SchemaExport : HHH000227: Running hbm2ddl schema export 
+2018:10:11 16:58:40.223 INFO  --- [Thread-56] o.h.tool.hbm2ddl.SchemaExport : HHH000230: Schema export complete 
+2018:10:11 16:58:40.494 INFO  --- [restartedMain] net.plipp.MyPlippApplication : Starting MyPlippApplication on User-PC with PID 7040 (E:\sts-workspace\my-plipp\target\classes started by User in E:\sts-workspace\my-plipp) 
+2018:10:11 16:58:40.495 INFO  --- [restartedMain] net.plipp.MyPlippApplication : No active profile set, falling back to default profiles: default 
+2018:10:11 16:58:40.496 INFO  --- [restartedMain] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b41a936: startup date [Thu Oct 11 16:58:40 KST 2018]; root of context hierarchy 
+2018:10:11 16:58:40.736 INFO  --- [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8892a97a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2018:10:11 16:58:40.807 INFO  --- [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:10:11 16:58:40.808 INFO  --- [restartedMain] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:10:11 16:58:40.808 INFO  --- [restartedMain] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.32 
+2018:10:11 16:58:40.822 INFO  --- [localhost-startStop-1] o.a.c.c.C.[.[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:10:11 16:58:40.824 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 328 ms 
+2018:10:11 16:58:40.855 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:10:11 16:58:40.855 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'webServlet' to [/h2-console/*] 
+2018:10:11 16:58:40.856 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:10:11 16:58:40.856 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:10:11 16:58:40.856 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:10:11 16:58:40.856 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:10:11 16:58:40.943 INFO  --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default' 
+2018:10:11 16:58:40.944 INFO  --- [restartedMain] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+2018:10:11 16:58:40.950 INFO  --- [restartedMain] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect 
+2018:10:11 16:58:40.964 INFO  --- [restartedMain] o.h.tool.hbm2ddl.SchemaExport : HHH000227: Running hbm2ddl schema export 
+2018:10:11 16:58:40.965 INFO  --- [restartedMain] o.h.tool.hbm2ddl.SchemaExport : HHH000230: Schema export complete 
+2018:10:11 16:58:40.966 INFO  --- [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2018:10:11 16:58:40.979 INFO  --- [restartedMain] o.s.j.datasource.init.ScriptUtils : Executing SQL script from URL [file:/E:/sts-workspace/my-plipp/target/classes/data.sql] 
+2018:10:11 16:58:40.979 INFO  --- [restartedMain] o.s.j.datasource.init.ScriptUtils : Executed SQL script from URL [file:/E:/sts-workspace/my-plipp/target/classes/data.sql] in 0 ms. 
+2018:10:11 16:58:41.061 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5b41a936: startup date [Thu Oct 11 16:58:40 KST 2018]; root of context hierarchy 
+2018:10:11 16:58:41.072 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[],methods=[GET]}" onto public java.lang.String net.plipp.web.HomeController.home() 
+2018:10:11 16:58:41.074 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/form],methods=[GET]}" onto public java.lang.String net.plipp.web.UserController.form() 
+2018:10:11 16:58:41.075 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public java.lang.String net.plipp.web.UserController.create(net.plipp.domain.User) 
+2018:10:11 16:58:41.075 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.String net.plipp.web.UserController.list(org.springframework.ui.Model) 
+2018:10:11 16:58:41.075 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}/form],methods=[GET]}" onto public java.lang.String net.plipp.web.UserController.updateForm(java.lang.Long,org.springframework.ui.Model) 
+2018:10:11 16:58:41.076 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{id}],methods=[POST]}" onto public java.lang.String net.plipp.web.UserController.updateUser(java.lang.Long,net.plipp.domain.User) 
+2018:10:11 16:58:41.076 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/login],methods=[POST]}" onto public java.lang.String net.plipp.web.UserController.login(java.lang.String,java.lang.String,javax.servlet.http.HttpSession) 
+2018:10:11 16:58:41.076 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/loginForm],methods=[GET]}" onto public java.lang.String net.plipp.web.UserController.loginForm() 
+2018:10:11 16:58:41.077 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/logout],methods=[GET]}" onto public java.lang.String net.plipp.web.UserController.logout(javax.servlet.http.HttpSession) 
+2018:10:11 16:58:41.077 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/welcometo],methods=[GET]}" onto public java.lang.String net.plipp.web.WelcomeController.welcome(org.springframework.ui.Model) 
+2018:10:11 16:58:41.079 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:10:11 16:58:41.079 INFO  --- [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:10:11 16:58:41.089 INFO  --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:10:11 16:58:41.090 INFO  --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:10:11 16:58:41.105 INFO  --- [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:10:11 16:58:41.177 INFO  --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729 
+2018:10:11 16:58:41.220 INFO  --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:10:11 16:58:41.234 INFO  --- [restartedMain] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:10:11 16:58:41.236 INFO  --- [restartedMain] net.plipp.MyPlippApplication : Started MyPlippApplication in 0.774 seconds (JVM running for 1679.951) 
