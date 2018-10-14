@@ -2,11 +2,14 @@
 <html lang="en">
 {{> include/header }}
 <body>
-	<h1>회원 가입</h1>
 
 {{> include/navigation }}
 
 {{#user}}
+
+<div class="container" id="main">
+   <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default content-main">
 	<form action="/users/{{id}}" method="post">
 		<div class="form-row">
 			<div class="form-group col-md-6">
@@ -33,11 +36,13 @@
 		</div>
 		<button type="submit" class="btn btn-primary">개인정보 수정</button>
 	</form>
+</div>
+</div>
+</div>
 {{/user}}
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="../webjars/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	<script src="../webjars/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+{{ >include/footer}}
+
 </body>
 </html>

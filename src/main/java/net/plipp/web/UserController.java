@@ -21,15 +21,15 @@ public class UserController {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	private Logger logger = LoggerFactory.getLogger(UserController.class);
-	
+
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
-		session.removeAttribute("user");
+		session.removeAttribute("sessionedUser");
 		return "redirect:/";
 	}
-	
+
 	@GetMapping("/loginForm")
 	public String loginForm() {
 		return "/user/login";
@@ -39,16 +39,15 @@ public class UserController {
 	public String login(String userId, String password, HttpSession session) {
 		User user = userRepository.findByUserId(userId);
 		logger.info(userId + password);
-		if(user == null) {
+		if (user == null) {
 			return "redirect:/users/loginForm";
 		}
-		if(!password.equals(user.getPassword())) {
+		if (!password.equals(user.getPassword())) {
 			return "redirect:/users/loginForm";
 		}
-		
-		session.setAttribute("user", user);
-		
-		
+
+		session.setAttribute("sessionedUser", user);
+
 		return "redirect:/";
 	}
 
@@ -71,15 +70,39 @@ public class UserController {
 	}
 
 	@GetMapping("/{id}/form")
-	public String updateForm(@PathVariable Long id, Model model) {
-		model.addAttribute("user", userRepository.findOne(id));
+	public String updateForm(@PathVariable Long id, Model model, HttpSession session) {
+		Object tempUser = session.getAttribute("sessionedUser");
+
+		if (tempUser == null) {
+			return "redirect:/users/loginForm";
+		}
+
+		User sessionedUser = (User) tempUser;
+
+		if (!sessionedUser.getId().equals(id)) {
+			throw new IllegalAccessError("꺼저라");
+		}
+
+		model.addAttribute("user", userRepository.findOne(sessionedUser.getId()));
 		return "user/updateForm";
 	}
 
 	@PostMapping("/{id}")
-	public String updateUser(@PathVariable Long id, User newUser) {
+	public String updateUser(@PathVariable Long id, User updatedUser, HttpSession session) {
+		Object tempUser = session.getAttribute("sessionedUser");
+
+		if (tempUser == null) {
+			return "redirect:/users/loginForm";
+		}
+
+		User sessionedUser = (User) tempUser;
+
+		if (!sessionedUser.getId().equals(id)) {
+			throw new IllegalAccessError("You can't update another user");
+		}
+		
 		User user = userRepository.findOne(id);
-		user.update(newUser);
+		user.update(updatedUser);
 		userRepository.save(user);
 		return "users";
 	}
